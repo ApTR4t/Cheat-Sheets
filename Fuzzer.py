@@ -20,7 +20,7 @@ for x in buffer:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(timeout)
         connect = s.connect((ip, port))
-        print("Sending Payload... %s" % len(x))
+        print("Wiring bytes together.... %s" % len(x))
         s.send(prefix + x + "\r\n")
         s.recv(1024)
         s.send("EXIT\r\n")
